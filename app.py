@@ -171,7 +171,6 @@ if __name__ == '__main__':
 	#const PORT = process.env.PORT || '8080'
 	#app=express();
 	#app.set("port",PORT);
-	app.debug=True
 	host="0.0.0.0"
 	app.run()
 	#app.secret_key = 'super secret key'
