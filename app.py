@@ -167,12 +167,10 @@ def check_answer():
 if __name__ == '__main__':
 	    with app.test_request_context("/"):
 			session["key"] = "value"
+			app.run()
 	#app.secret_key = 'super secret key'
 	#app.config['SESSION_TYPE'] = 'filesystem'
 	#sess.init_app(app)
 	#app.debug=True
-	app.run( 
         # host="0.0.0.0",
         # port=33507
-
-  )
