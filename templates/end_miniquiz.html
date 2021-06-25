@@ -1,0 +1,33 @@
+<!doctype html>
+<title>IOT Quiz</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_miniquiz.css')}}'>
+<div class=page>
+  <h1>IOT Quiz</h1>
+  <div class=metanav>
+
+  
+<h4>
+Thank you for taking the quiz!
+</h4>
+<p>
+Score: 
+<label for="score" >{{summary["score"]}}</label> 
+</p>
+<p>
+Correct answers: 
+<label for="correcta" >{{summary["correct"]}}</label> 
+</p>
+<p>
+Wrong answers: 
+<label for="wronga" >{{summary["wrong"]}}</label> 
+</p>
+<p>
+What is the use of the Ultrasonic Sensor?<br>'answer': 'Proximity Detection'<br>"How many pins are present in the Ultrasonic Sensor"<br>'answer': '4'
+<br>'question': 'What mode should we put the Arduino pin to, in order for object detection to work with the Ultrasonic Sensor?'<br>'answer': 'Digital'<br>
+'question': 'What will happen if we supply a voltage of 25V to the Vcc of the Ultrasonic sensor?'<br>'answer': 'Damage is caused'<br>
+'question': 'If 1 means an object is detected and 0 meaning no object is detected, then considering the
+ sensor is stationary, what can be said about the movement of the object if the output by the sensor is 1010101?','answer': "Object is oscillating side by side"
+'question':'What kind of waves does the Ultrasonic Sensor work on?'<br>'answer': 'Sound'<br>
+'question': 'What is the optimum current that is required to operate the Ultrasonic Sensor?'<br>'answer': '15 mA'
+</div>
+
