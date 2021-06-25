@@ -1,5 +1,6 @@
 import os
 from flask import Flask, session, render_template, url_for, redirect, request, flash
+from flask_session import Session
 from copy import deepcopy
 from datetime import datetime, date, time
 from random import choice, shuffle
