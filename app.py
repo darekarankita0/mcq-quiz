@@ -168,9 +168,9 @@ def check_answer():
 if __name__ == '__main__':
 	with app.test_request_context("/"):
 		session["key"] = "value"
-	const PORT = process.env.PORT || '8080'
-	app=express();
-	app.set("port",PORT);
+	#const PORT = process.env.PORT || '8080'
+	#app=express();
+	#app.set("port",PORT);
 	app.debug=True
 	app.run()
 });
