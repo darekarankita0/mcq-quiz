@@ -165,8 +165,8 @@ def check_answer():
     return render_template('python_answer.html',num=currentN,ntot=app.nquestions,descript=tip,anscheck1=the_check1,anscheck2=the_check2,anscheck3=the_check3,anscheck4=the_check4,ans_color1=the_color1,ans_color2=the_color2,ans_color3=the_color3,ans_color4=the_color4,ans_color6=the_color6,question=currentQ,ans1=a1,ans2=a2,ans3=a3,ans4=a4)
 # Runs the app using the web server on port 80, the standard HTTP port
 if __name__ == '__main__':
-	    with app.test_request_context("/"):
-			session["key"] = "value"
+	with app.test_request_context("/"):
+		session["key"] = "value"
 
 	#app.secret_key = 'super secret key'
 	#app.config['SESSION_TYPE'] = 'filesystem'
