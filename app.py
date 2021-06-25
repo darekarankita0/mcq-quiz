@@ -172,6 +172,8 @@ if __name__ == '__main__':
 	#app=express();
 	#app.set("port",PORT);
 	app.debug=True
+	host="0.0.0.0",
+        port=8080
 	app.run()
 
 	#app.secret_key = 'super secret key'
