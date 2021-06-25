@@ -9,7 +9,7 @@ from random import choice, shuffle
 #app.secret_key = os.urandom(24)
 #
 app = Flask(__name__)
-#SESSION_TYPE = "redis"
+#SESSION_TYPE = "memcache"
 PERMANENT_SESSION_LIFETIME = 1800
 
 app.config.update(SECRET_KEY=os.urandom(24))
