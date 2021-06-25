@@ -173,7 +173,6 @@ if __name__ == '__main__':
 	#app.set("port",PORT);
 	app.debug=True
 	app.run()
-});
 
 	#app.secret_key = 'super secret key'
 	#app.config['SESSION_TYPE'] = 'filesystem'
