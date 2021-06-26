@@ -61,10 +61,12 @@ def index():
         py_summary["correct"].append(int(session["current_question"]))
         score = len(py_summary["correct"])
         print(score)
+	print(py_summary["correct"])
         py_summary["score"]=score
 #      
       else:
         py_summary["wrong"].append(int(session["current_question"]))
+	print(py_summary["wrong"])
 #		
       # set the current question to the next number when checked
       session["current_question"] = str(int(session["current_question"])+1)
@@ -82,6 +84,8 @@ def index():
         score = len(py_summary["correct"])
         print(score)
         py_summary["score"]=score
+	print(py_summary["correct"])
+	print(py_summary["wrong"])
         return render_template("end_miniquiz.html",summary=py_summary)
 #  
   if "current_question" not in session:
@@ -95,6 +99,8 @@ def index():
     score = len(py_summary["correct"])
     print(score)
     py_summary["score"]=score
+    print(py_summary["correct"])
+    print(py_summary["wrong"])
     return render_template("end_miniquiz.html",summary=py_summary)
   
   # If the request is a GET request 
