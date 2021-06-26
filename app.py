@@ -1,5 +1,6 @@
 import os
 from flask import Flask, session, render_template, url_for, redirect, request, flash
+import uuid
 from flask_session import Session
 from copy import deepcopy
 from datetime import datetime, date, time
@@ -9,13 +10,15 @@ from random import choice, shuffle
 #app.secret_key = os.urandom(24)
 #
 app = Flask(__name__)
-SESSION_TYPE = "redis"
-PERMANENT_SESSION_LIFETIME = 1800
+app.secret_key = str(uuid.uuid1())
+print("Secret = {secret}.".format(secret=app.secret))
+#SESSION_TYPE = "redis"
+#PERMANENT_SESSION_LIFETIME = 1800
 
-app.config.update(SECRET_KEY=os.urandom(24))
+#app.config.update(SECRET_KEY=os.urandom(24))
 
-app.config.from_object(__name__)
-Session(app)
+#app.config.from_object(__name__)
+#Session(app)
 questions = {
 '1': {'tip': 'Proximity Detection', 'answer': 'Proximity Detection','question': 'What is the use of the Ultrasonic Sensor?','options': ['Proximity Detection','Humidity Detection','Image Processing','GPS']},'4': {'tip': '4', 'answer': '4', 'question': "How many pins are present in the Ultrasonic Sensor",'options': ['1', '3', '2', '4']}, '2': {'tip': 'Digital', 'answer': 'Digital', 'question': 'What mode should we put the Arduino pin to, in order for object detection to work with the Ultrasonic Sensor?','options': ['Analog','Digital','PCM','TDM']},'6': {'tip': 'Damage is caused', 'answer': 'Damage is caused','question': 'What will happen if we supply a voltage of 25V to the Vcc of the Ultrasonic sensor?','options': ['Damage is caused','Sensor will work fine','Sensor will not respond for the time the voltage is applied','Sensor will function normally']}, '5': {'tip': 'Object is oscillating side by side', 'answer': "Object is oscillating side by side", 'question': 'If 1 means an object is detected and 0 meaning no object is detected, then considering the sensor is stationary, what can be said about the movement of the object if the output by the sensor is 1010101?', 'options': ['Object is stationary','Object is oscillating side by side','Object is continuously moving away','Object is continuously moving closer']},'3': {'tip': 'Sound', 'answer': 'Sound', 'question': 'What kind of waves does the Ultrasonic Sensor work on?', 'options': ['Gas','Heat','Light','Sound']},'7': {'tip': '15 mA', 'answer': '15 mA', 'question': 'What is the optimum current that is required to operate the Ultrasonic Sensor?', 'options': ['20 mA','15 mA','200 A','1 A']}
 }
