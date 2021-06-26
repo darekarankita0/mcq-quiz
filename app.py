@@ -61,7 +61,6 @@ def index():
         py_summary["correct"].append(int(session["current_question"]))
         score = len(py_summary["correct"])
         print(score)
-	print(py_summary["correct"])
 	py_summary["score"]=score
 #      
       else:
