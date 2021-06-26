@@ -95,8 +95,6 @@ def index():
     score = len(py_summary["correct"])
     print(score)
     py_summary["score"]=score
-    print(py_summary["correct"])
-    print(py_summary["wrong"])
     return render_template("end_miniquiz.html",summary=py_summary)
   
   # If the request is a GET request 
