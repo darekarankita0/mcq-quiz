@@ -1,18 +1,15 @@
 <!doctype html>
-<title>IOT Quiz</title>
+<title>A short quiz</title>
 <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_miniquiz.css')}}'>
 <div class=page>
-  <h1>IOT Quiz Report</h1>
+  <h1>A short quiz</h1>
   <div class=metanav>
 
   
 <h4>
-Thank you for taking the quiz!
+Thank you for participating!
 </h4>
-<p>
-Score: 
-<label for="score" >{{summary["score"]}}</label> out of 7
-</p>
+
 <p>
 Correct answers: 
 <label for="correcta" >{{summary["correct"]}}</label> 
@@ -21,5 +18,7 @@ Correct answers:
 Wrong answers: 
 <label for="wronga" >{{summary["wrong"]}}</label> 
 </p>
+
+
 </div>
 
