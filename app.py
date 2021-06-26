@@ -11,7 +11,7 @@ from random import choice, shuffle
 #
 app = Flask(__name__)
 app.secret_key = str(uuid.uuid1())
-print("Secret = {secret}.".format(secret=app.secret))
+print("Secret = {secret}.".format(secret=app.secret_key))
 #SESSION_TYPE = "redis"
 #PERMANENT_SESSION_LIFETIME = 1800
 
