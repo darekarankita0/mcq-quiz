@@ -58,10 +58,10 @@ def index():
       correct_answer=questions[session.get("current_question")]["answer"]
 # 
       if curr_answer == correct_answer[:len(curr_answer)]: 
-		py_summary["correct"].append(int(session["current_question"]))
-                score = len(py_summary["correct"])
-                print(score)
-	        py_summary["score"]=score
+        py_summary["correct"].append(int(session["current_question"]))
+        score = len(py_summary["correct"])
+        print(score)
+        py_summary["score"]=score
 #      
       else:
         py_summary["wrong"].append(int(session["current_question"]))
