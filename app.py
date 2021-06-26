@@ -65,7 +65,6 @@ def index():
 #      
       else:
         py_summary["wrong"].append(int(session["current_question"]))
-	print(py_summary["wrong"])
 #		
       # set the current question to the next number when checked
       session["current_question"] = str(int(session["current_question"])+1)
